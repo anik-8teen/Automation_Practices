@@ -1,0 +1,26 @@
+package automation_Class;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.*;
+import org.openqa.selenium.firefox.*;
+
+public class login {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		WebDriverManager.firefoxdriver().setup();
+		WebDriver driver = new FirefoxDriver();
+		
+		driver.get("https://www.saucedemo.com/");
+		driver.manage().window().maximize();
+		driver.manage().window().minimize();
+	    
+		String website =driver.getPageSource();
+		
+		System.out.print(website);
+	
+		//System.out.print(variable);
+	}
+
+}
